@@ -1,3 +1,4 @@
+
 from ds.stack import Stack
 import pytest
 
@@ -20,9 +21,10 @@ def test_push(stack):
     assert len(stack) == 2
 
 
-def test_pop(self):
-    stack.push("ons")
+def test_pop(stack):
+    stack.push("hello")
     stack.push("world")
     assert stack.pop() == "world"
-    assert stack.pop() == "ons"
+    assert stack.pop() == "hello"
     assert stack.pop() is None
+

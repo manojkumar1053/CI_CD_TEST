@@ -10,4 +10,8 @@ class Stack:
         self._storage.append(item)
 
     def pop(self):
-        return self._storage.pop()
+        try: 
+            item = self._storage.po()
+        except indexError:
+            item = None
+        return item

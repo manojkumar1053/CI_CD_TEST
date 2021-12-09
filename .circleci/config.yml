@@ -18,10 +18,11 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+            python  -m pytest -v
 
 
       # # Step 3: Run Unit Test Cases
       # - run:
       #     name: Install dependencies
       #     command: |
-      #       python  -m pytest -v
+            

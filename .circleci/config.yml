@@ -18,15 +18,18 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-            python  -m pytest -v
 
-
-            
       # Step 3: run Unit  tests
       - run:
           name: Run Unit tests
           command: |
             . venv/bin/activate
-            python  -m pytest -v
+            python  -m pytest -sv
+
+      # Step 4: End Test
+      - run:
+          name: Run Unit tests
+          command: |
+            . venv/bin/activate
             echo "___________TEST PASSED_________________________"
             echo "___________S U C C E S S !!!_________________________"

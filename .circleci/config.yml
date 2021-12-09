@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.9
+      - image: circleci/python:3.10
 
     working_directory: ~/repo
 
@@ -21,8 +21,12 @@ jobs:
             python  -m pytest -v
 
 
-      # # Step 3: Run Unit Test Cases
-      # - run:
-      #     name: Install dependencies
-      #     command: |
             
+      # Step 3: run Unit  tests
+      - run:
+          name: Run Unit tests
+          command: |
+            . venv/bin/activate
+            python  -m pytest -v
+            echo "___________TEST PASSED_________________________"
+            echo "___________S U C C E S S !!!_________________________"
